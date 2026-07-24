@@ -1,0 +1,50 @@
+[
+{
+  "author": "Stefan",
+  "rating": 5,
+  "review": "Die Ferienwohnung war sauber, modern und sehr gut ausgestattet. Wir kommen gerne wieder.",
+  "imagepath": null
+},
+{
+    "author": "Benjamin",
+    "rating": 5,
+    "review": "Eine wundervolle Wohnung mit schönem Ausblick und tolle Gastgeber",
+    "imagepath": null
+},
+{
+  "author": "Marie",
+  "rating": 5,
+  "review": "Die Unterkunft ist sehr gemütlich eingerichtet. Die Lage direkt am Wasser ist top, vom  Balkon hat man einen wunderschönen Ausblick. Die Straße ist leider etwas laut, aber zumindest Abends nicht mehr stark befahren",
+  "imagepath": null
+},
+{
+    "author": "Daniela",
+    "rating": 5,
+    "review": "Wir hatten einen wunderbaren Aufenthalt bei Ingeborg und Peter. Ein herzlicher Empfang, die Kommunikation lief problemlos und prompt, wir durften sogar netterweise später auschecken und alles war so wie beschrieben! Die Gegend ist sehr schön zum Wandern, Rad fahren und Freiburg und Frankreich  sind nicht weit. Einfach toll!",
+    "imagepath": null
+},
+{
+  "author": "Wendy",
+  "rating": 5,
+  "review": "We really enjoyed our stay - great location for us and our trips to France and Europa Park. Super handy with supermarkets close by and lovely local restaurant. Anna was the perfect host.",
+  "imagepath": null
+},
+{
+    "author": "Thomas",
+    "rating": 5,
+    "review": "Wir hatten einen sehr schönen Aufenthalt zum Wandern und mit intensiven Spieleabenden. Dafür ist die Unterkunft optimal. Ingeborg Und Peter sind immer erreichbar und helfen bei allen Fragen. Jederzeit gerne wieder",
+    "imagepath": null
+},
+{
+  "author": "Simon",
+  "rating": 5,
+  "review": "Gemütliche Wohnung. Anna war freundlich und hilfsbereit. Wir hatten eine gemütliche Zeit.",
+  "imagepath": null
+},
+{
+    "author": "Matteo",
+    "rating": 5,
+    "review": "Perfekt gelegen zwichen Freiburg und Europapark. Zu Fuss ein grosser Einkaufsladen und direkt an einem schönen Fluss gelegen für einen kleinen Spatziergang. Sehr ruhige Gegend und die Wohnung mit allem ausgestattet, was man so braucht ! Vielen lieben Dank !",
+    "imagepath": null
+}
+]

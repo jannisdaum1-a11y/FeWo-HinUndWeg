@@ -1,0 +1,519 @@
+/* Gesamte Seite */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #696969;
+    line-height: 1.6;
+}
+
+
+/* Sidebar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background-color: #2c3e50;
+
+    transition: transform 0.5s ease;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* eingeklappte Sidebar */
+header.closed {
+    transform: translateX(-235px);
+}
+.sidebar_logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+.navigation {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu-button {
+
+    position: absolute;
+
+    top: 50%;
+    right: -15px;
+
+    transform: translateY(-50%);
+
+    width: 15px;
+    height: 60px;
+
+    border: none;
+
+    background-color: #2c3e50;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    border-radius: 0 8px 8px 0;
+}
+
+main {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+
+    
+}
+main.expanded {
+    margin-left:25px;
+    transition: margin-left 0.5s ease;
+
+}
+
+/*header Image*/
+.header-image {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/* Überschrift */
+header h1 {
+    margin-bottom: 40px;
+    font-size: 28px;
+    align-self: center;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 20px;
+}
+
+/* Links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+nav a.active {
+    color: #f39c12;
+    font-weight: bold;
+}
+#info {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 10px;
+}
+#info div {
+    border: 2px solid #ccc;
+    margin: 15px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+#info div h2 {
+    margin-top: 0;
+    font-size: 20px;
+    align-self: center;
+}
+.gallery {
+    display: flex;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.gallery img {
+    width: auto;
+    height: 250px;          /* gleiche Höhe für alle Bilder */
+    max-width: 80vw;        /* auf kleinen Geräten nicht zu breit */
+
+    object-fit: contain;    /* nichts abschneiden */
+    flex-shrink: 1;
+
+    scroll-snap-align: center;
+
+    border-radius: 10px;
+}
+.lightbox {
+    display: none;
+
+    position: fixed;
+    z-index: 2000;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* großes Bild */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+
+    border-radius: 10px;
+}
+/* Photo Sphere Viewer (360grad) */
+.rundgang-button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #b5cad8;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+.rundgang-button:hover {
+    background-color: #2c3e50;
+}
+.rundgang-button.active {
+    background-color: #2c3e50;
+}
+#viewer {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#calender-frame {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+/* Schließen Button */
+.close {
+    position: absolute;
+
+    top: 20px;
+    right: 40px;
+
+    color: white;
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+#contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 30px;
+    max-width: 100%;
+}
+#contact-form div {
+    display: flex;
+    flex-direction: column;
+}
+#contact-message {
+    grid-column: 1 / -1;
+}
+
+#contact-form button {
+    grid-column: 1 / -1;
+}
+#review-window {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+}
+.speech-bubble {
+    position: relative;
+    display: inline-block;
+    background: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 15px;
+    padding: 15px 10px;
+    margin: 20px;
+    max-width: 300px;
+    min-width: 300px;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+/* Dreieck */
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 40px;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+/* Rand des Dreiecks */
+.speech-bubble::before {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: 38px;
+    border-width: 17px 17px 0;
+    border-style: solid;
+    border-color: #2c3e50 transparent transparent transparent;
+    z-index: -1;
+}
+.stars {
+    color: #FFD700; /* Gold */
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+.speech-bubble p::first-letter{
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+.quotes {
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+.bubble-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
+}
+#author {
+    display: block;
+    text-align: right;
+}
+
+#impressum_contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    gap: 30px;
+    justify-items: start; /* linksbündig */
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer_logo {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+
+
+/*mobile view*/
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+
+    /* Sidebar als Overlay */
+    header {
+        width: 230px;
+        transform: translateX(-230px);
+        z-index: 1000;
+        padding: 15px;
+    }
+
+
+    /* Sidebar geöffnet */
+    header.open {
+        transform: translateX(0);
+    }
+
+
+    /* Button an Sidebar */
+    .menu-button {
+        right: -35px;
+        width: 35px;
+        height: 60px;
+        font-size: 14px;
+    }
+
+
+    /* Hauptbereich volle Breite */
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+
+    main.expanded {
+        margin-left: 0;
+    }
+
+
+    /* Header Bild */
+    .header-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+
+    /* Logo */
+    .sidebar_logo {
+        width: 75%;
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+
+
+    /* Navigation */
+    nav a {
+        font-size: 16px;
+    }
+
+    nav li {
+        margin-bottom: 12px;
+    }
+
+
+    /* Informationskarten */
+    #info {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+
+    #info div {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+
+    #info div h2 {
+        font-size: 18px;
+    }
+
+
+    /* Galerie */
+    .gallery {
+        overflow-x: auto;
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+
+    .gallery img {
+        height: 200px;
+        width: auto;
+        max-width: 90vw;
+        flex-shrink: 0;
+    }
+
+
+    /* 360° Rundgang */
+    .rundgang-button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+
+    #viewer {
+        height: 300px;
+        border-radius: 10px;
+    }
+
+
+    /* Kalender */
+    #calender-frame {
+        height: 500px;
+    }
+
+
+    /* Kontaktformular */
+    #contact-form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+
+    #contact-message,
+    #contact-form button {
+        grid-column: auto;
+    }
+
+
+    input,
+    textarea,
+    select,
+    button {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+
+    /* Impressum */
+    #impressum_contact {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: left;
+    }
+
+
+    .footer_logo {
+        width: 100px;
+    }
+
+
+    /* Lightbox */
+    .lightbox img {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+
+    .close {
+        top: 10px;
+        right: 20px;
+        font-size: 35px;
+    }
+
+}
