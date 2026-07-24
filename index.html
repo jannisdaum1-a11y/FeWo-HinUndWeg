@@ -225,7 +225,9 @@
         <!-- ================= KONTAKT ================= -->
         <section id="kontakt">
             <h2>Kontakt Formular</h2>
-            <form id="contact-form" action="mailto:info@ferienwohnung.de" method="post">
+            <p><em>Mit <strong>*</strong> gekennzeichnete Felder sind auszufüllen!</em></p>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="2657469c-3176-4ebc-8a8f-373f5e1d4b3e">
                 <div id="personal-info">
                     <label for="name">Name*:</label>
                     <input type="text" id="name" name="name" required>
@@ -235,17 +237,17 @@
                 </div>
 
                 <div id="booking-info">
-                    <label for="date">Anreise:</label>
-                    <input type="text" id="date-from" name="date" placeholder="TT-MM-JJJJ">
+                    <label for="date">Gewünschtes Anreisedatum:</label>
+                    <input type="text" id="date-from" name="date_from" placeholder="TT-MM-JJJJ">
 
-                    <label for="date">Abreise:</label>
-                    <input type="text" id="date-to" name="date" placeholder="TT-MM-JJJJ">
+                    <label for="date">Gewünschtes Abreisedatum:</label>
+                    <input type="text" id="date-to" name="date_to" placeholder="TT-MM-JJJJ">
                 </div>
 
                 <div id="contact-message">
                     <textarea id="message" name="message" rows="10" required placeholder="Ihre Nachricht..."></textarea>
                 </div>
-
+                <div class="h-captcha" data-captcha="true"></div>
                 <button type="submit">Absenden</button>
             </form>
         </section>
@@ -315,5 +317,8 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/de.js"></script>
      <!-- Custom JS -->
     <script src="js/script.js"></script>
+
+    <!--HCAPTCHA -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
